@@ -1,0 +1,28 @@
+﻿
+
+@foreach(var i in Model)
+{
+    <h1>Տեսակ- @i.Type</h1>
+    <p></p>
+    <h3>
+        Անուն- @i.Name, <p></p>
+        Ապրանքի մասին-@i.Description, <p></p>
+        Քանակ-@i.Count հատ, <p></p>
+        Գին-@i.Price դրամ,<p></p>
+    </h3>
+    <form method="post" action="Delete" >
+        <button type="submit" name="Id" value="@i.Id">Delete</button>
+
+    </form>
+    <form method="post" action="Edit">
+        <input type="text" name="Type" placeholder="Տեսակ"><p></p>
+        <input type="text" name="Name" placeholder="Անուն"><p></p>
+        <input type="text" name="Description" placeholder="Մասին"><p></p>
+        <input type="number" name="Count" placeholder="Քանակ"><p></p>
+        <input type="number" name="Price" placeholder="Գին"><p></p>
+        <button type="submit" name="Id" value="@i.Id">Edit</button>
+
+    </form>
+
+}
+
